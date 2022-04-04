@@ -16,7 +16,15 @@ namespace SpyStore
         {
             InitializeComponent();
 
-            DisplayAlert("Bienvenido", showProduct.Name, "ok");
+            Description.Text = showProduct.Description;
+            Name.Text = showProduct.Name;
+            Price.Text = Convert.ToString(showProduct.Price);
+            Id.Text = Convert.ToString(showProduct.Id);
+        }
+
+        private void AlertDipaly(object sender, EventArgs e)
+        {
+            DisplayAlert("ERROR", "Contrato falldio", "ok");
         }
     }
 }
