@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    BackgroundColor="#082739"
+    ios:Page.UseSafeArea="true"
+    x:Class="SpyStore.ListView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <NavigationPage.TitleView>
+        <Grid>
+            <ImageButton
+                BackgroundColor="Transparent"
+                Command="{Binding TestReload}"
+                CommandParameter="{x:Type ListView}"
+                HeightRequest="25"
+                HorizontalOptions="Start"
+                Source="https://i.ibb.co/BVZ1xn3/image.png" />
+            <Image
+                Aspect="AspectFit"
+                Grid.Column="0"
+                HeightRequest="40"
+                HorizontalOptions="CenterAndExpand"
+                Source="https://i.ibb.co/bP3Cgt4/image.png" />
+            <ImageButton
+                Clicked="OnNextPageButtonClicked"
+                HeightRequest="25"
+                HorizontalOptions="End"
+                Source="https://i.ibb.co/Jy2gLBj/image.png" />
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#EDF5EB">
+            <Image
+                Aspect="Fill"
+                Source="https://i.ibb.co/z4d1hG0/image.png"
+                VerticalOptions="End" />
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <CollectionView
+                    ItemsSource="{Binding BList}"
+                    SelectedItem="{Binding SelectedProduct}"
+                    SelectionChangedCommand="{Binding GoToDetailCommand}"
+                    SelectionMode="Single">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                BackgroundColor="#C9D4C5"
+                                HasShadow="False"
+                                Margin="10,0">
+                                <Grid>
+                                    <Image
+                                        HeightRequest="50"
+                                        HorizontalOptions="Start"
+                                        Source="https://i.ibb.co/vDqrh4w/Open-Peeps-Avatar-and-Backdrop-1.png" />
+                                    <Label
+                                        HorizontalOptions="CenterAndExpand"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding Name}"
+                                        VerticalTextAlignment="Center" />
+                                    <Label
+                                        HorizontalOptions="End"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding Price}"
+                                        VerticalTextAlignment="Center" />
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+            <Image
+                Aspect="Fill"
+                Source="https://i.ibb.co/TPXPX1p/image.png"
+                VerticalOptions="End" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

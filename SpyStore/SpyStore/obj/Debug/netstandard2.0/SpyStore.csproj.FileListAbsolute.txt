@@ -1,0 +1,15 @@
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/bin/Debug/netstandard2.0/SpyStore.deps.json
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/bin/Debug/netstandard2.0/SpyStore.dll
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/bin/Debug/netstandard2.0/SpyStore.pdb
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/SpyStore.csprojAssemblyReference.cache
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/AddView.xaml.g.cs
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/DescriptionView.xaml.g.cs
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/ListView.xaml.g.cs
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/SpyStore.AssemblyInfoInputs.cache
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/SpyStore.AssemblyInfo.cs
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/SpyStore.csproj.CoreCompileInputs.cache
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/SpyStore.dll
+/Users/luisenrique/RiderProjects/SpyStore/SpyStore/SpyStore/obj/Debug/netstandard2.0/SpyStore.pdb

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    BackgroundColor="#082739"
+    ios:Page.UseSafeArea="true"
+    x:Class="SpyStore.AddView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <NavigationPage.TitleView>
+        <Image
+            Aspect="AspectFit"
+            Grid.Column="0"
+            HeightRequest="40"
+            HorizontalOptions="Start"
+            Source="https://i.ibb.co/bP3Cgt4/image.png" />
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#EDF5EB">
+            <Image
+                Aspect="Fill"
+                Source="https://i.ibb.co/z4d1hG0/image.png"
+                VerticalOptions="End" />
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="120"
+                HorizontalOptions="Center"
+                Source="https://i.ibb.co/VSXZJJH/Open-Peeps-Avatar-and-Backdrop.png" />
+            <StackLayout Margin="40,0" VerticalOptions="CenterAndExpand">
+                <Label Text="Nombre:" />
+                <Entry x:Name="EntryName" />
+                <Label Text="ID:" />
+                <Entry x:Name="EntryId" />
+                <Label Text="Precio:" />
+                <Entry x:Name="EntryPrice" />
+                <Label Text="Descripcion:" />
+                <Entry x:Name="EntryDescription" />
+                <Button Clicked="Button_OnClicked" Text="Crear" />
+            </StackLayout>
+            <Image
+                Aspect="Fill"
+                Source="https://i.ibb.co/TPXPX1p/image.png"
+                VerticalOptions="End" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

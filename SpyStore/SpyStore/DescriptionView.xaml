@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    BackgroundColor="#082739"
+    ios:Page.UseSafeArea="true"
+    x:Class="SpyStore.DescriptionView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <NavigationPage.TitleView>
+        <Image
+            Aspect="AspectFit"
+            Grid.Column="0"
+            HeightRequest="40"
+            HorizontalOptions="CenterAndExpand"
+            Source="https://i.ibb.co/bP3Cgt4/image.png" />
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#EDF5EB">
+            <Image
+                Aspect="Fill"
+                Source="https://i.ibb.co/z4d1hG0/image.png"
+                VerticalOptions="End" />
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Frame />
+            </StackLayout>
+            <Image
+                Aspect="Fill"
+                Source="https://i.ibb.co/TPXPX1p/image.png"
+                VerticalOptions="End" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
