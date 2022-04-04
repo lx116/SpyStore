@@ -82,6 +82,13 @@ namespace SpyStore
             {
                 if (SelectedProduct != null)
                 {
+                    Products sendProducts = new Products();
+                    sendProducts.Name = SelectedProduct.Name;
+                    sendProducts.Id = SelectedProduct.Id;
+                    sendProducts.Description = SelectedProduct.Description;
+                    sendProducts.Price = SelectedProduct.Price;
+                    
+                    Navigation.PushAsync (new DescriptionView(sendProducts));
                     
                 }
             });
