@@ -15,7 +15,6 @@ namespace SpyStore.Assets
         
         public void ChargeInitialProducts()
         {
-
             GlobalProducts.Add(new Products()
             {
                 Name = "Rock", 
@@ -48,6 +47,7 @@ namespace SpyStore.Assets
                 Price = 450,
                 Id = 3
             });
+            
         }
 
         public string ComprobationSave(string save)

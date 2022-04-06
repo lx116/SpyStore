@@ -12,7 +12,7 @@
             Aspect="AspectFit"
             Grid.Column="0"
             HeightRequest="40"
-            HorizontalOptions="CenterAndExpand"
+            HorizontalOptions="Start"
             Source="https://i.ibb.co/bP3Cgt4/image.png" />
     </NavigationPage.TitleView>
     <ContentPage.Content>

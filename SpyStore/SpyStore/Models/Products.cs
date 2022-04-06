@@ -1,3 +1,5 @@
+using Xamarin.Forms;
+
 namespace SpyStore.Models
 {
     public class Products
@@ -6,6 +8,6 @@ namespace SpyStore.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public string Description { get; set; }
-        
+
     }
 }

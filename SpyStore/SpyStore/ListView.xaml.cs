@@ -39,9 +39,7 @@ namespace SpyStore
         public ListView()
         {
             InitializeComponent();
-
             
-
             ProductList list = new ProductList();
             
             list.ChargeInitialProducts();
@@ -57,8 +55,8 @@ namespace SpyStore
                     Description = elements.Description,
                     Price = elements.Price
                 });
+                AbsoluteList.RecordList.Add(elements);
             }
-            
             
             TestReload = new Command(() =>
             {
@@ -76,7 +74,14 @@ namespace SpyStore
                     });
                     list.GlobalProducts.Add(listItem);
                 }
+
+                if (NewElements.Count == 0)
+                {
+                    DisplayAlert("ADEVERTANCIA", "No se han encontrado nuevos elementos", "OK");
+                }
+                
             });
+            
             
             GoToDetailCommand = new Command(() =>
             {
@@ -96,10 +101,29 @@ namespace SpyStore
             BindingContext = this;
 
         }
+
+        private void SearchBar(object sender, TextChangedEventArgs e)
+        {
+            ProductList list = new ProductList();
+            
+            var searchByName = AbsoluteList.RecordList.Where(c => c.Name.Contains(Search.Text));
+
+            ShowSearchDates.ItemsSource = searchByName;
+        }
         
         async void OnNextPageButtonClicked (object sender, EventArgs e)
         {
             await Navigation.PushAsync (new AddView());
+        }
+
+        async void RotationIcon_OnClicked(object sender, EventArgs e)
+        {
+            RotationIcon.RotateTo(360, 1000);
+            await RotationIcon.ScaleTo(1.3, 1000);
+            await RotationIcon.ScaleTo(1, 500);
+            RotationIcon.Rotation = 0;
+            RotationIcon.Scale = 1;
+
         }
     }
 }

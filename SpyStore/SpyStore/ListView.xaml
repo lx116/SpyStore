@@ -11,11 +11,13 @@
         <Grid>
             <ImageButton
                 BackgroundColor="Transparent"
+                Clicked="RotationIcon_OnClicked"
                 Command="{Binding TestReload}"
                 CommandParameter="{x:Type ListView}"
                 HeightRequest="25"
                 HorizontalOptions="Start"
-                Source="https://i.ibb.co/BVZ1xn3/image.png" />
+                Source="https://i.ibb.co/BVZ1xn3/image.png"
+                x:Name="RotationIcon" />
             <Image
                 Aspect="AspectFit"
                 Grid.Column="0"
@@ -23,6 +25,7 @@
                 HorizontalOptions="CenterAndExpand"
                 Source="https://i.ibb.co/bP3Cgt4/image.png" />
             <ImageButton
+                BackgroundColor="Transparent"
                 Clicked="OnNextPageButtonClicked"
                 HeightRequest="25"
                 HorizontalOptions="End"
@@ -30,7 +33,15 @@
         </Grid>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#EDF5EB">
+        <StackLayout BackgroundColor="#EDF5EB" Spacing="0">
+            <SearchBar
+                BackgroundColor="#082739"
+                CancelButtonColor="#E43227"
+                Placeholder="¿Que estas buscando?"
+                PlaceholderColor="#EDF5EB"
+                TextChanged="SearchBar"
+                TextColor="#EDF5EB"
+                x:Name="Search" />
             <Image
                 Aspect="Fill"
                 Source="https://i.ibb.co/z4d1hG0/image.png"
@@ -40,7 +51,8 @@
                     ItemsSource="{Binding BList}"
                     SelectedItem="{Binding SelectedProduct}"
                     SelectionChangedCommand="{Binding GoToDetailCommand}"
-                    SelectionMode="Single">
+                    SelectionMode="Single"
+                    x:Name="ShowSearchDates">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame

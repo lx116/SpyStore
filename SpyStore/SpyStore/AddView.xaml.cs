@@ -14,7 +14,6 @@ namespace SpyStore
     public partial class AddView : ContentPage
     {
         private ProductList list = new ProductList();
-        Products product = new Products();
         public AddView()
         {
             
@@ -25,7 +24,7 @@ namespace SpyStore
 
         private void Button_OnClicked(object sender, EventArgs e)
         {
-            
+            Products product = new Products();
             
             if (!string.IsNullOrEmpty(EntryName.Text))
             {
@@ -67,13 +66,19 @@ namespace SpyStore
             }
             
             list.GlobalProducts.Add(product);
+            
             AbsoluteList.RecordList.Add(product);
+            
+
+            DisplayAlert("EXITO", "Se ha creado el agente "+ product.Name+" con exito", "NICE");
+            
             ClearCamps();
             
         }
         
         void ClearCamps()
         {
+            EntryId.Text = "";
             EntryDescription.Text = "";
             EntryPrice.Text = "";
             EntryName.Text = "";
